@@ -20,7 +20,9 @@ app.use(morgan());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+
+app.use('*/images', express.static(__dirname + '/public/images'));
 
 app.use('/', router)
 

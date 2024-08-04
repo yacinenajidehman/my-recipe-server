@@ -17,6 +17,14 @@ const userUpdateValidatorRules = () => {
     ];
 };
 
+const postValidationRules = () => {
+    return [
+        body('title').notEmpty().withMessage('عنوان المنشور مطلوب'),
+        body('contents').notEmpty().withMessage('مكونات المنشور مطلوبة'),
+        body('steps').notEmpty().withMessage('خطوات المنشور مطلوبة'),
+    ]
+}
+
 const validate = (req, res, next) => {
     const errors = validationResult(req);
 
@@ -33,5 +41,6 @@ const validate = (req, res, next) => {
 module.exports = {
     userValidatorRules,
     userUpdateValidatorRules,
-    validate
+    validate,
+    postValidationRules
 };

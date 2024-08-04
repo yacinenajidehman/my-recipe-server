@@ -1,1 +1,15 @@
 /node_modules
+
+.env
+
+/public/images/*.jpg
+/public/images/*.jpeg
+/public/images/*.png
+/public/images/*.gif
+/public/images/*.bmp
+/public/images/*.tiff
+/public/images/*.tif
+/public/images/*.webp
+/public/images/*.svg
+/public/images/*.heic
+/public/images/*.heif

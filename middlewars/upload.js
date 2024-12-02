@@ -29,7 +29,8 @@ const upload = multer({
         else{
             cb(new multer.MulterError('not a picture'));
         }
-    }
+    },
+    limits: { fileSize: 100 * 1024 * 1024 }
 });
 
 module.exports = upload;
